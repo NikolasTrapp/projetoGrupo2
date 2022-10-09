@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estoque.css">
     <title>Document</title>
 </head>
 
@@ -34,16 +35,67 @@
                 </ul>
             </div>
             <div class="container-fluid w-50">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Busque uma marca ou modelo"
-                        aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                <form class="d-flex" role="search" onsubmit="return false;">
+                    <input id="input-pesquisa" class="form-control me-2" type="search"
+                        placeholder="Busque uma marca ou modelo" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" id="pesquisa">Pesquisar</button>
+                    <button class="btn btn-outline-success" type="button" id="limpar-busca">Limpar</button>
                 </form>
             </div>
         </div>
     </nav>
 
+    <main>
+        <div class="container text-center">
+            <h1>Estoque</h1>
+            <div id="filtros">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#filtros-collapse" aria-expanded="false" aria-controls="filtros-collapse">
+                    Filtros
+                </button>
+                <div class="collapse" id="filtros-collapse">
+                    <div class="card card-body text-center">
+                        <div class="mb-3">
+                            <span class="d-block">Marcas:</span>
+                            <div id="marcas-container">
+                                <!--Injetar com javascript-->
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="d-block">Marcas:</span>
+                            <div id="modelos-container">
+                                <!--Injetar com javascript-->
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="d-block">Ano:</span>
+                            <label for="ano-minimo">De: </label>
+                            <input type="number" id="ano-minimo">
+                            <label for="ano-maximo">Até: </label>
+                            <input type="number" id="ano-maximo">
+                        </div>
+                        <div class="mb-3">
+                            <span class="d-block">Preço:</span>
+                            <label for="preco-minimo">De: </label>
+                            <input type="number" id="preco-minimo">
+                            <label for="preco-maximo">Até: </label>
+                            <input type="number" id="preco-maximo">
+                        </div>
+                        <button class="btn btn-primary" id="aplicar-filtros">Aplicar filtros</button>
+                        <button class="btn btn-primary" id="limpar-filtros">Limpar filtros</button>
+                    </div>
+                </div>
+            </div>
+            <div id="estoque">
+
+            </div>
+        </div>
+    </main>
+
+
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/estoque.js"></script>
 </body>
 
 </html>
