@@ -5,13 +5,13 @@ function gerarEstrutura(carros){
     carros.map(carro => {
         estrutura += `
         <div class="card" style="width: 18rem;">
-            <img src="img/${carro.nome_imagem}" class="card-img-top" alt="${carro.nome_imagem}" style="width: 100%; height: 200px;>
+            <img src="img/${carro.nome_imagem}" class="card-img-top" alt="${carro.nome_imagem}" style="width: 100%; height: 200px;">
             <div class="card-body">
                 <h5 class="card-title">${carro.modelo}</h5>
                 <h5 class="card-title">${carro.marca}</h5>
                 <p class="card-text">R$ ${parseFloat(carro.preco).toFixed(2)}</p>
                 <p class="card-text">${carro.quilometragem} km</p>
-                <a href="#" class="btn btn-primary">Tenho interesse</a>
+                <a onclick="modal('${carro.modelo}')" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#janela-modal">Tenho interesse</a>
             </div>
         </div>
         `;
@@ -56,8 +56,8 @@ document.querySelector("#limpar-busca").addEventListener("click", function(){
 });
 
 document.querySelector("#aplicar-filtros").addEventListener("click", function(){
-    let lista_marcas = [];
-    let lista_modelos = [];
+    var lista_marcas = [];
+    var lista_modelos = [];
     let anoMin = document.getElementById("ano-minimo").value;
     let anoMax = document.getElementById("ano-maximo").value;
     let precoMin = document.getElementById("preco-minimo").value;
@@ -114,6 +114,23 @@ document.querySelector("#aplicar-filtros").addEventListener("click", function(){
     } else {
         alert("Nenhum carro encontrado")
     }
+});
+
+function modal(modelo){
+    document.querySelector("#titulo-modal").innerHTML += " ao " + modelo;
+    document.querySelector("#botao-enviar").setAttribute("rel", modelo);
+}
+
+document.querySelector("#botao-enviar").addEventListener("click", function(){
+    let dados = {
+        nome: document.getElementById("nome").value,
+        email: document.getElementById("email").value,
+        telefone: document.getElementById("telefone").value,
+        endereco: document.getElementById("endereco").value
+    }
+
+    interesses.push(dados);
+    alert("Interesse registrado com sucesso!")
 });
 
 document.querySelector("#limpar-filtros").addEventListener("click", function(){
