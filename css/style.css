@@ -1,0 +1,27 @@
+.card {
+    margin: 10px 30px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.preco {
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.descricao {
+    font-size: 14px;
+    font-weight: lighter;
+    display: block;
+}
+
+.titulo {
+    margin: 50px 0px;
+}
+
+.ver-mais{
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 25px;
+}
