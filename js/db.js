@@ -71,6 +71,15 @@ carros = [
         ano: 2012,
         quilometragem: 1200
     },
+    {
+        id: 9,
+        modelo: "Fusca",
+        marca: "Volkswagen",
+        preco: 18900.90,
+        nome_imagem: "fusca.jpg",
+        ano: 2012,
+        quilometragem: 1200
+    }
 ];
 
 let interesses = [];

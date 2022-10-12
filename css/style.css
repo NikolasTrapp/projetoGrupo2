@@ -25,3 +25,82 @@
     font-size: 14px;
     padding: 5px 25px;
 }
+
+.cabecalho-estoque h1{
+    margin: 15px 0;
+}
+
+@media (max-width: 900px) {
+    .cabecalho-estoque{
+        display: flex;
+        flex-flow: column;
+        flex-direction: column;
+        margin: 8%;
+    }
+    
+    .cabecalho-estoque button{
+        width: 120px;
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+    
+    #pesquisa{
+        width: 75%;
+    }
+}
+
+@media (min-width: 901px){
+    .cabecalho-estoque button{
+        width: 120px;
+        margin: 0 10px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .cabecalho-estoque {        
+        margin-left: 8%; 
+    }
+}
+
+.cabecalho-estoque input{
+    height: 36px;
+    width: 25%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#filtros-collapse .card{
+    width: 84%;
+    border: 1px solid black;
+    margin: 10px 8%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-flow: row wrap;
+}
+
+#filtros-collapse .card div{
+    width: 180px;
+}
+
+#filtros-collapse .card button{
+    height: 36px;
+    align-self: center;
+}
+
+.input-filtro{
+    width: 80px;
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#estoque {
+    margin: 10px 0;
+}
+
+#paginacao{
+    display: flex;
+    justify-content: center;  
+}

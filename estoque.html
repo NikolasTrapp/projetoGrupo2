@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/estoque.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
@@ -46,47 +46,52 @@
     </nav>
 
     <main>
-        <div class="container text-center">
-            <h1>Estoque</h1>
-            <div id="filtros">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#filtros-collapse" aria-expanded="false" aria-controls="filtros-collapse">
-                    Filtros
+        <div class="container">
+            <div class="cabecalho-estoque">
+                <h1>Estoque</h1>
+                <input type="text" id="pesquisa" placeholder="Pesquisar marcas ou modelos">
+                <button class="btn btn-dark pesquisa-estoque botoes-estoque">PESQUISAR</button>
+                <button class="btn border-dark btn-light text-black botoes-estoque" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#filtros-collapse" aria-expanded="false"
+                    aria-controls="filtros-collapse">
+                    FILTRAR
                 </button>
-                <div class="collapse" id="filtros-collapse">
-                    <div class="card card-body text-center">
-                        <div class="mb-3">
-                            <span class="d-block">Marcas:</span>
-                            <div id="marcas-container">
-                                <!--Injetar com javascript-->
-                            </div>
+            </div>
+            <div class="collapse" id="filtros-collapse">
+                <div class="card card-body">
+                    <div class="mb-3">
+                        <h6 class="d-block">Marcas</h6>
+                        <div id="marcas-container">
+                            <!--Injetar com javascript-->
                         </div>
-                        <div class="mb-3">
-                            <span class="d-block">Modelos:</span>
-                            <div id="modelos-container">
-                                <!--Injetar com javascript-->
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <span class="d-block">Ano:</span>
-                            <label for="ano-minimo">De: </label>
-                            <input type="number" id="ano-minimo">
-                            <label for="ano-maximo">Até: </label>
-                            <input type="number" id="ano-maximo">
-                        </div>
-                        <div class="mb-3">
-                            <span class="d-block">Preço:</span>
-                            <label for="preco-minimo">De: </label>
-                            <input type="number" id="preco-minimo">
-                            <label for="preco-maximo">Até: </label>
-                            <input type="number" id="preco-maximo">
-                        </div>
-                        <button class="btn btn-primary" id="aplicar-filtros">Aplicar filtros</button>
-                        <button class="btn btn-primary" id="limpar-filtros">Limpar filtros</button>
                     </div>
+                    <div class="mb-3">
+                        <h6 class="d-block">Modelos</h6>
+                        <div id="modelos-container">
+                            <!--Injetar com javascript-->
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="d-block">Ano</h6>
+                        <label for="ano-minimo">De:</label>
+                        <input type="number" id="ano-minimo" class="input-filtro">
+                        <label for="ano-maximo">Até:</label>
+                        <input type="number" id="ano-maximo" class="input-filtro">
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="d-block">Preço</h6>
+                        <label for="preco-minimo">De:</label>
+                        <input type="number" id="preco-minimo" class="input-filtro">
+                        <label for="preco-maximo">Até:</label>
+                        <input type="number" id="preco-maximo" class="input-filtro">
+                    </div>
+                    <button class="btn btn-dark pesquisa-estoque botoes-estoque" id="aplicar-filtros">Aplicar
+                        filtros</button>
+                    <button class="btn border-dark btn-light text-black botoes-estoque" id="limpar-filtros">Limpar
+                        filtros</button>
                 </div>
             </div>
-            <div id="estoque">
+            <div id="estoque" class="text-center">
 
             </div>
         </div>

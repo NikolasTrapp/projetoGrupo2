@@ -4,14 +4,20 @@ function gerarEstrutura(carros){
     let estrutura = "";
     carros.map(carro => {
         estrutura += `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 20rem;">
             <img src="img/${carro.nome_imagem}" class="card-img-top" alt="${carro.nome_imagem}" style="width: 100%; height: 200px;">
             <div class="card-body">
-                <h5 class="card-title">${carro.modelo}</h5>
-                <h5 class="card-title">${carro.marca}</h5>
-                <p class="card-text">R$ ${parseFloat(carro.preco).toFixed(2)}</p>
-                <p class="card-text">${carro.quilometragem} km</p>
-                <a onclick="modal('${carro.modelo}')" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#janela-modal">Tenho interesse</a>
+                <div class="text-start">
+                    <h5 class="card-title">HYUNDAI HB20 - 2020</h5>
+                    <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                    <span class="card-text descricao">2020/2021 | 15.000 km</span>
+                </div>
+                <div class="text-end">
+                    <a href="#" class="btn btn-white border-dark ver-mais">VER MAIS</a>
+                </div>
+                <div class="text-start">
+                    <span class="preco">R$ 77.000</span>
+                </div>
             </div>
         </div>
         `;
