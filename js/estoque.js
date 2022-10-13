@@ -10,44 +10,40 @@ function gerarEstrutura(carros) {
             estrutura += '<div class="row">'; // Criar a linha
             // Adicionar o primeiro carro
             estrutura += `
-                <div class="col">
+                <div class="col-sm-4 col-12 pb-5">
                     <div class="card" style="width: 20rem;">
-                    <img src="img/${carros[i].nome_imagem}" class="card-img-top" alt="${carros[i].nome_imagem}" style="width: 100%; height: 200px;">
-                    <div class="card-body">
-                        <div class="text-start">
-                            <h5 class="card-title">${carros[i].modelo} - ${carros[i].ano}</h5>
-                            <span class="card-text descricao">${carros[i].descricao}</span>
-                            <span class="card-text descricao">${carros[i].ano} | ${carros[i].quilometragem} km</span>
+                        <img src="img/${carros[i].nome_imagem}" class="card-img-top" alt="${carros[i].nome_imagem}" style="width: 100%; height: 200px;">
+                        <div class="card-body">
+                            <div class="text-start">
+                                <h5 class="card-title">${carros[i].modelo} - ${carros[i].ano}</h5>
+                                <span class="card-text descricao">${carros[i].descricao}</span>
+                                <span class="card-text descricao">${carros[i].ano} | ${carros[i].quilometragem} km</span>
+                                <span class="preco">R$ ${carros[i].preco.toFixed(2)}</span>
+                            </div>
+                            <div class="text-end">
+                                <a href="#" class="btn btn-outline-dark btn-sm" >VER MAIS</a>
+                            </div>
                         </div>
-                        <div class="text-end">
-                            <a href="#" class="btn btn-white border-dark ver-mais" >VER MAIS</a>
-                        </div>
-                        <div class="text-start">
-                            <span class="preco">R$ ${carros[i].preco.toFixed(2)}</span>
-                        </div>
-                    </div>
                     </div>
                 </div>
             `;
             //Adicionar o segundo carro caso a lista recebida tenha este index
             if (i + 1 < carros.length) {
                 estrutura += `
-                <div class="col">
+                <div class="col-sm-4 col-12 pb-5">
                     <div class="card" style="width: 20rem;">
-                    <img src="img/${carros[i + 1].nome_imagem}" class="card-img-top" alt="${carros[i + 1].nome_imagem}" style="width: 100%; height: 200px;">
-                    <div class="card-body">
-                        <div class="text-start">
-                            <h5 class="card-title">${carros[i + 1].modelo} - ${carros[i + 1].ano}</h5>
-                            <span class="card-text descricao">${carros[i + 1].descricao}</span>
-                            <span class="card-text descricao">${carros[i + 1].ano} | ${carros[i + 1].quilometragem} km</span>
+                        <img src="img/${carros[i + 1].nome_imagem}" class="card-img-top" alt="${carros[i + 1].nome_imagem}" style="width: 100%; height: 200px;">
+                        <div class="card-body">
+                            <div class="text-start">
+                                <h5 class="card-title">${carros[i + 1].modelo} - ${carros[i + 1].ano}</h5>
+                                <span class="card-text descricao">${carros[i + 1].descricao}</span>
+                                <span class="card-text descricao">${carros[i + 1].ano} | ${carros[i + 1].quilometragem} km</span>
+                                <span class="preco">R$ ${carros[i + 1].preco.toFixed(2)}</span>
+                            </div>
+                            <div class="text-end">
+                                <a href="#" class="btn btn-outline-dark btn-sm">VER MAIS</a>
+                            </div>
                         </div>
-                        <div class="text-end">
-                            <a href="#" class="btn btn-white border-dark ver-mais">VER MAIS</a>
-                        </div>
-                        <div class="text-start">
-                            <span class="preco">R$ ${carros[i + 1].preco.toFixed(2)}</span>
-                        </div>
-                    </div>
                     </div>
                 </div>
                 `;
@@ -55,7 +51,7 @@ function gerarEstrutura(carros) {
             //Adicionar o terceiro carro caso a lista recebida tenha este index
             if (i + 2 < carros.length){
                 estrutura += `
-                <div class="col">
+                <div class="col-sm-4 col-12 pb-5">
                     <div class="card" style="width: 20rem;">
                         <img src="img/${carros[i + 2].nome_imagem}" class="card-img-top" alt="${carros[i + 2].nome_imagem}" style="width: 100%; height: 200px;">
                         <div class="card-body">
@@ -63,12 +59,10 @@ function gerarEstrutura(carros) {
                                 <h5 class="card-title">${carros[i + 2].modelo} - ${carros[i + 2].ano}</h5>
                                 <span class="card-text descricao">${carros[i + 2].descricao}</span>
                                 <span class="card-text descricao">${carros[i + 2].ano} | ${carros[i + 2].quilometragem} km</span>
+                                <span class="preco">R$ ${carros[i + 2].preco.toFixed(2)}</span>
                             </div>
                             <div class="text-end">
-                                <a href="#" class="btn btn-white border-dark ver-mais">VER MAIS</a>
-                            </div>
-                            <div class="text-start">
-                                <span class="preco">R$ ${carros[i + 2].preco.toFixed(2)}</span>
+                                <a href="#" class="btn btn-outline-dark btn-sm">VER MAIS</a>
                             </div>
                         </div>
                     </div>
