@@ -34,14 +34,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="container-fluid w-50">
-                <form class="d-flex" role="search" onsubmit="return false;">
-                    <input id="input-pesquisa" class="form-control me-2" type="search"
-                        placeholder="Busque uma marca ou modelo" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit" id="pesquisa">Pesquisar</button>
-                    <button class="btn btn-outline-success" type="button" id="limpar-busca">Limpar</button>
-                </form>
-            </div>
         </div>
     </nav>
 
@@ -50,7 +42,7 @@
             <div class="cabecalho-estoque">
                 <h1>Estoque</h1>
                 <input type="text" id="pesquisa" placeholder="Pesquisar marcas ou modelos">
-                <button class="btn btn-dark pesquisa-estoque botoes-estoque">PESQUISAR</button>
+                <button id="bt-pesquisa" class="btn btn-dark pesquisa-estoque botoes-estoque">PESQUISAR</button>
                 <button class="btn border-dark btn-light text-black botoes-estoque" type="button"
                     data-bs-toggle="collapse" data-bs-target="#filtros-collapse" aria-expanded="false"
                     aria-controls="filtros-collapse">
@@ -91,8 +83,8 @@
                         filtros</button>
                 </div>
             </div>
-            <div id="estoque" class="text-center">
-
+            <div id="estoque" class="text-start">
+                
             </div>
         </div>
     </main>
