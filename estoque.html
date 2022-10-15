@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+    <link rel="shortcut icon" href="/img/fav-autoshop.jpg" type="image/x-icon">
     <title>Estoque</title>
 </head>
 
@@ -14,14 +16,16 @@
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg bg-nav-autoshop">
         <div class="container-fluid navpad">
-            <a class="navbar-brand" href="index.html"><img src="/img/logotipo-branco.png" width="200px"
+            <a class="navbar-brand" href="estoque.html"><img src="/img/logotipo-branco.png" width="200px"
                     alt="Logo AutoShop"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="nnavbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icofont-navigation-menu"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
                     <li class="nav-item">
                         <a class="nav-link" href="sobre.html">Sobre nós</a>
                     </li>
@@ -53,7 +57,7 @@
             </div>
             <div class="collapse" id="filtros-collapse">
                 <div class="card card-body">
-                    <div class="mb-3">
+                    <div class="col-sm-4 col-12 ">
                         <h6 class="d-block">Marcas</h6>
                         <div id="marcas-container">
                             <!--Injetar com javascript-->
@@ -126,7 +130,67 @@
             </div>
         </div>
     </div>
-
+    <footer class="text-center text-lg-start bg-light text-muted pt-1">
+        <div class="container-fluid text-right text-black">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid coluna -->
+            <div class="col-md-3">
+              <!-- logo -->
+                <img src="/img/logotipo-preto.png" class="img-fluid "  alt="Imagem logo">
+            </div>
+            <!-- Coluna do Grid-->
+            <div class="col-md-3">
+              <!-- Textos do Footer -->
+              <h6 class="text-uppercase mb-2 mt-4 tituloFooter"><strong>
+                Horário de Atendimento</strong></h6>
+              <p>Segunda a Sexta das 8:00 as 18:00
+              </p>
+              <p>Sábado das 8:00 as 12:00
+              </p>
+              <h6 class="text-uppercase fw-bold mt-4 tituloFooter">
+                Endereço
+              </h6>
+              <p>Rua 7 de setembro, 1562</p>
+              <p>Blumenau-SC</p>
+              <p>89034-992</p>
+            </div>
+            <!-- Coluna do grid -->
+            <div class="col-md-3">
+              <!-- Textos -->
+              <h6 class="text-uppercase fw-bold mt-4 tituloFooter">
+                Contato
+              </h6>
+              <p>
+                (47) 3367-4560
+              </p>
+              <p>
+                (47) 99614-9202
+              </p>
+              <p>
+                contato@shopauto.com.br
+              </p>
+            </div>
+            <!-- Coluna do Grid -->
+            <div class="col-md-3">
+              <!-- Texto -->
+              <h6 class="text-uppercase fw-bold pr-8 mt-4  tituloFooter">
+                Siga-nos nas redes</h6>
+                <!-- Ícones das redes sociais -->
+                <p><a href=""><i class="bi bi-instagram icone"></i></a>
+                  <a href=""><i class="bi bi-facebook icone"></i></p></a>
+                  <a href=""><img src="/img/whats.png" class="whatslogo"  alt="Logo do Whatsapp"></a>
+                  <div>
+    
+                  </div>
+            </div>
+          </div>
+        </div>
+      <!-- Texto de Copyright -->
+      <div class="text-center text-black p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        Desenvolvido por © <b>Grupo 2</b> | Todos os direitos reservados
+      </div>
+    </footer>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/db.js"></script>

@@ -10,9 +10,9 @@ function gerarEstrutura(carros) {
             estrutura += '<div class="row">'; // Criar a linha
             // Adicionar o primeiro carro
             estrutura += `
-                <div class="col-sm-4 col-12 pb-5">
-                    <div class="card" style="width: 20rem;">
-                        <img src="img/${carros[i].nome_imagem}" class="card-img-top" alt="${carros[i].nome_imagem}" style="width: 100%; height: 200px;">
+                <div class="col-sm-4 col-12 pt-2 pb-5">
+                    <div class="card" style="width: 100%;">
+                        <img src="img/${carros[i].nome_imagem}" class="card-img-top" alt="${carros[i].nome_imagem}" style="width: 100%; height: 275px;">
                         <div class="card-body">
                             <div class="text-start">
                                 <h5 class="card-title">${carros[i].modelo} - ${carros[i].ano}</h5>
@@ -30,9 +30,9 @@ function gerarEstrutura(carros) {
             //Adicionar o segundo carro caso a lista recebida tenha este index
             if (i + 1 < carros.length) {
                 estrutura += `
-                <div class="col-sm-4 col-12 pb-5">
-                    <div class="card" style="width: 20rem;">
-                        <img src="img/${carros[i + 1].nome_imagem}" class="card-img-top" alt="${carros[i + 1].nome_imagem}" style="width: 100%; height: 200px;">
+                <div class="col-sm-4 col-12 pt-2 pb-5">
+                    <div class="card" style="width: 100%;">
+                        <img src="img/${carros[i + 1].nome_imagem}" class="card-img-top" alt="${carros[i + 1].nome_imagem}" style="width: 100%; height: 275px;">
                         <div class="card-body">
                             <div class="text-start">
                                 <h5 class="card-title">${carros[i + 1].modelo} - ${carros[i + 1].ano}</h5>
@@ -51,9 +51,9 @@ function gerarEstrutura(carros) {
             //Adicionar o terceiro carro caso a lista recebida tenha este index
             if (i + 2 < carros.length){
                 estrutura += `
-                <div class="col-sm-4 col-12 pb-5">
-                    <div class="card" style="width: 20rem;">
-                        <img src="img/${carros[i + 2].nome_imagem}" class="card-img-top" alt="${carros[i + 2].nome_imagem}" style="width: 100%; height: 200px;">
+                <div class="col-sm-4 col-12 pt-2 pb-5">
+                    <div class="card" style="width: 100%;">
+                        <img src="img/${carros[i + 2].nome_imagem}" class="card-img-top" alt="${carros[i + 2].nome_imagem}" style="width: 100%; height: 275px;">
                         <div class="card-body">
                             <div class="text-start">
                                 <h5 class="card-title">${carros[i + 2].modelo} - ${carros[i + 2].ano}</h5>
