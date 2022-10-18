@@ -222,19 +222,27 @@ input.pesquisar {
 }
 
 /* filtro cabeçalho estoque */
+@media (min-width: 901px) {
+    #filtros-collapse .card {
+        width: 100%;
+        border: 1px solid black;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        flex-flow: row wrap;
+    }
+}
 
-#filtros-collapse .card {
-    width: 93%;
-    border: 1px solid black;
-    margin: 10px 3%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    flex-flow: row wrap;
+@media (max-width: 900px) {
+    #filtros-collapse .card {
+        width: 100%;
+    }
 }
 
 #filtros-collapse .card div {
     width: 180px;
+    margin: 5px 0;
 }
 
 #filtros-collapse .card button {
@@ -302,17 +310,4 @@ input.pesquisar {
     padding: 2px;
     transition: all 0.5s;
 
-}
-
-/* Sobre nós */
-.textoJustificado {
-    text-align: justify;
-}
-
-.tituloSobre {
-    margin: 3rem 0;
-}
-
-h3[text=AutoShop] {
-    background-color: yellow;
 }
