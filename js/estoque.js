@@ -76,8 +76,8 @@ function gerarEstrutura(carros) {
 }
 
 //Função para carregar os veículos na div principal
-function carregarVeiculos() {
-    estoque.innerHTML = gerarEstrutura(carros);
+function carregarVeiculos(lista_carros) {
+    estoque.innerHTML = gerarEstrutura(lista_carros);
 }
 
 //Função para carregar os valores no filtro de veículos
@@ -208,10 +208,14 @@ document.querySelector("#limpar-filtros").addEventListener("click", function () 
     document.getElementById("ano-maximo").value = "";
     document.getElementById("preco-minimo").value = "";
     document.getElementById("preco-maximo").value = "";
-    console.log(carros);
     estoque.innerHTML = gerarEstrutura(carros);
 });
 
 //Iniciar as listas
-carregarVeiculos();
+if (sessionStorage.CARROS == null){
+    carregarVeiculos(carros);
+} else {
+    carregarVeiculos(JSON.parse(sessionStorage.CARROS));
+    sessionStorage.removeItem("CARROS");
+}
 carregarValores();
