@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
-body,html{
+
+body,
+html {
     overflow-y: visible;
     overflow-x: hidden;
-    
+
 }
+
 body::-webkit-scrollbar {
-    width: 12px;               /* largura da barra lateral */
-  }
+    width: 12px;
+    /* largura da barra lateral */
+}
+
 body::-webkit-scrollbar-thumb {
-    background-color: #212529;    /* cor da barra lateral*/
-    border-radius: 15px;       /* redondeza da borda*/
-    
-  }
+    background-color: #212529;
+    /* cor da barra lateral*/
+    border-radius: 15px;
+    /* redondeza da borda*/
+
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -34,7 +42,7 @@ h5 {
     background-color: #EEEEEE;
 }
 
-.bgLaranja{
+.bgLaranja {
     background-color: #F17400;
 }
 
@@ -44,41 +52,46 @@ h5 {
 }
 
 .tituloBranco {
-    margin: 3rem 0 1.5rem 0; 
+    margin: 3rem 0 1.5rem 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#tituloBranco {
     text-transform: uppercase;
     color: #fff;
 }
 
 .tituloNb {
-    margin: 3rem 0 1.5rem 0;   
+    margin: 3rem 0 1.5rem 0;
     text-transform: uppercase;
 }
 
 .button-box {
-    text-align:center;
- }
+    text-align: center;
+}
 
- .btn-outline-dark{
+.btn-outline-dark {
     border: #212529 solid 1px;
     font-weight: 500;
     justify-content: flex-end;
- }
+}
 
- .btn-dark{
+.btn-dark {
     border: #212529 solid 1px;
     font-weight: 400;
- }
+}
 
- .btmSpace{
+.btmSpace {
     margin-bottom: 3rem;
- }
+}
 
- @media only screen and (max-width: 1025px) {
-    .topSpace{
+@media only screen and (max-width: 1025px) {
+    .topSpace {
         margin-top: 2vh;
         margin-left: 16vh
     }
-  }
+}
 
 /* navbar */
 
@@ -99,15 +112,15 @@ a.nav-link:hover {
     color: #F17400;
 }
 
-a.navbar-brand{
+a.navbar-brand {
     padding: 1rem;
 }
 
 @media only screen and (max-width: 1025px) {
-    a.navbar-brand{
+    a.navbar-brand {
         padding: 0;
     }
-  }
+}
 
 /* barra pesquisa home */
 
@@ -144,11 +157,11 @@ input.pesquisar {
 /* cabeçalho estoque */
 
 .cabecalho-estoque h1 {
-    margin: 15px ;
+    margin: 15px;
     margin-right: 15vh;
 }
 
-.cabecalho-estoque button{
+.cabecalho-estoque button {
     width: 120px;
     margin: 0 10px;
     font-weight: bold;
@@ -156,19 +169,20 @@ input.pesquisar {
 }
 
 @media (max-width: 800px) {
-    .cabecalho-estoque{
+    .cabecalho-estoque {
         display: flex;
         flex-flow: column;
         flex-direction: column;
         width: 100%;
         margin-left: 8%;
-        
+
     }
-    .cabecalho-estoque h1{
+
+    .cabecalho-estoque h1 {
         margin-left: 12vh;
     }
-    
-    .cabecalho-estoque button{
+
+    .cabecalho-estoque button {
         margin: 5px 0;
         margin-left: 12vh;
         ;
@@ -188,17 +202,18 @@ input.pesquisar {
         font-weight: bold;
         font-size: 15px;
     }
-    
-    .cabecalho-estoque {        
-        margin-left: 0%; 
+
+    .cabecalho-estoque {
+        margin-left: 0%;
     }
-    .cabecalho-estoque h1{
+
+    .cabecalho-estoque h1 {
         margin-left: 0%;
     }
 }
 
 
-.cabecalho-estoque input{
+.cabecalho-estoque input {
     height: 36px;
     width: 25%;
     border-radius: 0.375rem;
@@ -247,39 +262,57 @@ input.pesquisar {
     display: flex;
     justify-content: space-around;
 }
+
 /*Footer*/
 @media (max-width: 600px) {
-    .img-fluid{
+    .img-fluid {
         padding-top: 2vh !important;
         margin-right: 2vh !important;
     }
-    .whatslogo{
+
+    .whatslogo {
         padding-top: 1vh !important;
         padding-bottom: 1vh;
         width: 10vh !important;
         margin-right: 14vh;
     }
 }
-.img-fluid{
+
+.img-fluid {
     padding-top: 11vh;
     margin-left: 15px;
     max-width: 80% !important
 }
-.whatslogo{
+
+.whatslogo {
     padding-top: 5vh;
     margin-left: 15vh;
     margin-bottom: 1vh;
     width: 11vh
-    
 }
-.tituloFooter{
+
+.tituloFooter {
     font-family: 'Montserrat', sans-serif;
-    
+
 }
-.icone{
+
+.icone {
     font-size: 30px;
     color: #F17400;
     padding: 2px;
-    transition:all 0.5s;
-    
+    transition: all 0.5s;
+
+}
+
+/* Sobre nós */
+.textoJustificado {
+    text-align: justify;
+}
+
+.tituloSobre {
+    margin: 3rem 0;
+}
+
+h3[text=AutoShop] {
+    background-color: yellow;
 }
