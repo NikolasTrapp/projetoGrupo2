@@ -8,7 +8,7 @@ const campo_alert = document.getElementById("liveAlertPlaceholder");
 
 //Função para gerar a estrutura recebendo a lista como parâmetro
 function gerarEstrutura(lista_carros) {
-    var max = Math.ceil(lista_carros.length / 9);
+    max = Math.ceil(lista_carros.length / 9);
     let estrutura = "";
     document.querySelector("#paginacao").innerHTML = `<a href="#" onclick="anterior()">&lt;</a>&nbsp;&nbsp;`;
     for (let i = 0; i < max; i++) {
@@ -20,16 +20,16 @@ function gerarEstrutura(lista_carros) {
                             <div class="row">
                             <div class="col col-sm-4 col-12 pb-5">
                                 <div class="card" style="width: 100%;">
-                                    <img src="img/${lista_carros[j].nome_imagem}" class="card-img-top" alt="${lista_carros[j].nome_imagem}" style="width: 100%; height: 275px;">
+                                    <img src="img/${lista_carros[j].modelo.toLowerCase()}/${lista_carros[j].nome_imagem[0]}" class="card-img-top" alt="${lista_carros[j].nome_imagem[0]}" style="width: 100%; height: 275px;">
                                     <div class="card-body">
                                         <div class="text-start">
                                             <h5 class="card-title">${lista_carros[j].modelo} - ${lista_carros[j].ano}</h5>
                                             <span class="card-text descricao">${lista_carros[j].descricao}</span>
                                             <span class="card-text descricao">${lista_carros[j].ano} | ${lista_carros[j].quilometragem} km</span>
-                                            <span class="preco">R$ ${lista_carros[j].preco.toFixed(2)}</span>
+                                            <span class="preco">R$ ${lista_carros[j].preco.toFixed(3)}</span>
                                         </div>
                                         <div class="text-end">
-                                            <a href="#" class="btn btn-outline-dark btn-sm" rel="${lista_carros[j].id}">VER MAIS</a>
+                                            <a href="#" class="btn btn-outline-dark btn-sm botao-vermais" rel="${lista_carros[j].id}">VER MAIS</a>
                                         </div>
                                     </div>
                                 </div>
@@ -41,16 +41,16 @@ function gerarEstrutura(lista_carros) {
                     estrutura += `
                             <div class="col col-sm-4 col-12 pb-5">
                                 <div class="card" style="width: 100%;">
-                                    <img src="img/${lista_carros[j + 1].nome_imagem}" class="card-img-top" alt="${lista_carros[j + 1].nome_imagem}" style="width: 100%; height: 275px;">
+                                    <img src="img/${lista_carros[j + 1].modelo.toLowerCase()}/${lista_carros[j + 1].nome_imagem[0]}" class="card-img-top" alt="${lista_carros[j + 1].nome_imagem[0]}" style="width: 100%; height: 275px;">
                                     <div class="card-body">
                                         <div class="text-start">
                                             <h5 class="card-title">${lista_carros[j + 1].modelo} - ${lista_carros[j + 1].ano}</h5>
                                             <span class="card-text descricao">${lista_carros[j + 1].descricao}</span>
                                             <span class="card-text descricao">${lista_carros[j + 1].ano} | ${lista_carros[j + 1].quilometragem} km</span>
-                                            <span class="preco">R$ ${lista_carros[j + 1].preco.toFixed(2)}</span>
+                                            <span class="preco">R$ ${lista_carros[j + 1].preco.toFixed(3)}</span>
                                         </div>
                                         <div class="text-end">
-                                            <a href="#" class="btn btn-outline-dark btn-sm" rel="${lista_carros[i + 1].id}">VER MAIS</a>
+                                            <a href="#" class="btn btn-outline-dark btn-sm botao-vermais" rel="${lista_carros[i + 1].id}">VER MAIS</a>
                                         </div>
                                     </div>
                                 </div>
@@ -62,16 +62,16 @@ function gerarEstrutura(lista_carros) {
                     estrutura += `
                             <div class="col col-sm-4 col-12 pb-5">
                                 <div class="card" style="width: 100%;">
-                                    <img src="img/${lista_carros[j + 2].nome_imagem}" class="card-img-top" alt="${lista_carros[j + 2].nome_imagem}" style="width: 100%; height: 275px;">
+                                    <img src="img/${lista_carros[j + 2].modelo.toLowerCase()}/${lista_carros[j + 2].nome_imagem[0]}" class="card-img-top" alt="${lista_carros[j + 2].nome_imagem[0]}" style="width: 100%; height: 275px;">
                                     <div class="card-body">
                                         <div class="text-start">
                                             <h5 class="card-title">${lista_carros[j + 2].modelo} - ${lista_carros[j + 2].ano}</h5>
                                             <span class="card-text descricao">${lista_carros[j + 2].descricao}</span>
                                             <span class="card-text descricao">${lista_carros[j + 2].ano} | ${lista_carros[j + 2].quilometragem} km</span>
-                                            <span class="preco">R$ ${lista_carros[j + 2].preco.toFixed(2)}</span>
+                                            <span class="preco">R$ ${lista_carros[j + 2].preco.toFixed(3)}</span>
                                         </div>
                                         <div class="text-end">
-                                            <a href="#" class="btn btn-outline-dark btn-sm" rel="${lista_carros[j + 2].id}">VER MAIS</a>
+                                            <a href="#" class="btn btn-outline-dark btn-sm botao-vermais" rel="${lista_carros[j + 2].id}">VER MAIS</a>
                                         </div>
                                     </div>
                                 </div>
@@ -160,13 +160,15 @@ function carregarValores() {
     modelos_carro.forEach(modelo => {
         modelos.innerHTML += `<option value="${modelo}">${modelo}</option>`;
     });
+
+    document.querySelectorAll(".botao-vermais").forEach(a => a.addEventListener("click", vermais));
 }
 
 //Pegar evento de clique do botão de pesquisar modelos ou marcas
 document.querySelector("#bt-pesquisa").addEventListener("click", function () {
     campo_alert.innerHTML = "";
     //Pegar o valor informado pelo usuário no input
-    const pesquisa = document.getElementById("pesquisa").value;
+    const pesquisa = document.getElementById("pesquisaEstoque").value;
 
     // Gerar uma lista de carros baseada nos valores informados
     const lista_carros = carros.filter(function (carro) {
@@ -192,6 +194,16 @@ document.querySelector("#bt-pesquisa").addEventListener("click", function () {
         }
     }
 });
+
+function vermais(){
+    const id = this.rel
+    carro = carros.filter(function(carro){
+        return carro.id == id;
+    })[0];
+
+    sessionStorage.setItem("CARRO", JSON.stringify(carro));
+    window.location = "carro.html"
+}
 
 //Adicionar evento de clique ao botão de aplicar os filtros
 document.querySelector("#aplicar-filtros").addEventListener("click", function () {
@@ -228,11 +240,12 @@ document.querySelector("#aplicar-filtros").addEventListener("click", function ()
     }).filter(function (carro) { //Terceiro filtro, verificar o ano
         if (anoMin || anoMax) {
             if (anoMin && !anoMax) {
-                return carro.ano >= anoMin;
+                console.log(parseInt(carro.ano.split("/")[0]));
+                return parseInt(carro.ano.split("/")[0]) >= anoMin;
             } else if (!anoMin && anoMax) {
-                return carro.ano <= anoMax;
+                return parseInt(carro.ano.split("/")[1]) <= anoMax;
             } else {
-                return carro.ano >= anoMin && carro.ano <= anoMax;
+                return parseInt(carro.ano.split("/")[0]) >= anoMin && parseInt(carro.ano.split("/")[1]) <= anoMax;
             }
         } else {
             return true;

@@ -13,3 +13,15 @@ document.querySelector("#botao-pesquisa").addEventListener("click", function(){
         window.location = "estoque.html";
     }
 });
+
+function vermais(){
+    const id = this.rel
+    carro = carros.filter(function(carro){
+        return carro.id == id;
+    })[0];
+
+    sessionStorage.setItem("CARRO", JSON.stringify(carro));
+    window.location = "carro.html"
+}
+
+document.querySelectorAll(".botao-vermais").forEach(a => a.addEventListener("click", vermais));

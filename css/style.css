@@ -117,10 +117,6 @@ a.nav-link:hover {
     color: #F17400;
 }
 
-a.navbar-brand {
-    
-}
-
 @media only screen and (max-width: 1025px) {
     a.navbar-brand {
         padding: 0;
@@ -164,7 +160,8 @@ input.pesquisar {
 .cabecalho-estoque h1 {
     margin: 15px;
     margin-left: 1vh; 
-    margin-top: 7vh
+    margin-top: 7vh;
+    padding: 15px 0;
 }
 
 .cabecalho-estoque button {
