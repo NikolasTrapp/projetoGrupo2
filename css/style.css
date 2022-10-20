@@ -31,10 +31,11 @@ h3,
 h4,
 h5 {
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .linha {
-    width: 90vw;
+    width: 85vw;
     margin: 1rem auto 0 auto;
 }
 
@@ -63,7 +64,7 @@ h5 {
 }
 
 .tituloNb {
-    margin: 3rem 0 1.5rem 0;
+    margin: 3rem 0 0 0;
     text-transform: uppercase;
 }
 
