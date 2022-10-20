@@ -5,6 +5,8 @@ const estoque = document.getElementById("estoque");
 var atual = 1;
 var max = 1;
 const campo_alert = document.getElementById("liveAlertPlaceholder");
+var marcas_carro;
+var modelos_carro;
 
 //Função para gerar a estrutura recebendo a lista como parâmetro
 function gerarEstrutura(lista_carros) {
@@ -26,7 +28,7 @@ function gerarEstrutura(lista_carros) {
                                             <h5 class="card-title">${lista_carros[j].modelo} - ${lista_carros[j].ano}</h5>
                                             <span class="card-text descricao">${lista_carros[j].descricao}</span>
                                             <span class="card-text descricao">${lista_carros[j].ano} | ${lista_carros[j].quilometragem} km</span>
-                                            <span class="preco">R$ ${lista_carros[j].preco.toFixed(3)}</span>
+                                            <span class="preco">R$ ${lista_carros[j].preco}</span>
                                         </div>
                                         <div class="text-end">
                                             <a href="#" class="btn btn-outline-dark btn-sm botao-vermais" rel="${lista_carros[j].id}">VER MAIS</a>
@@ -47,7 +49,7 @@ function gerarEstrutura(lista_carros) {
                                             <h5 class="card-title">${lista_carros[j + 1].modelo} - ${lista_carros[j + 1].ano}</h5>
                                             <span class="card-text descricao">${lista_carros[j + 1].descricao}</span>
                                             <span class="card-text descricao">${lista_carros[j + 1].ano} | ${lista_carros[j + 1].quilometragem} km</span>
-                                            <span class="preco">R$ ${lista_carros[j + 1].preco.toFixed(3)}</span>
+                                            <span class="preco">R$ ${lista_carros[j + 1].preco}</span>
                                         </div>
                                         <div class="text-end">
                                             <a href="#" class="btn btn-outline-dark btn-sm botao-vermais" rel="${lista_carros[i + 1].id}">VER MAIS</a>
@@ -68,7 +70,7 @@ function gerarEstrutura(lista_carros) {
                                             <h5 class="card-title">${lista_carros[j + 2].modelo} - ${lista_carros[j + 2].ano}</h5>
                                             <span class="card-text descricao">${lista_carros[j + 2].descricao}</span>
                                             <span class="card-text descricao">${lista_carros[j + 2].ano} | ${lista_carros[j + 2].quilometragem} km</span>
-                                            <span class="preco">R$ ${lista_carros[j + 2].preco.toFixed(3)}</span>
+                                            <span class="preco">R$ ${lista_carros[j + 2].preco}</span>
                                         </div>
                                         <div class="text-end">
                                             <a href="#" class="btn btn-outline-dark btn-sm botao-vermais" rel="${lista_carros[j + 2].id}">VER MAIS</a>
@@ -150,8 +152,8 @@ function carregarValores() {
     const marcas = document.querySelector("#marcas-container");
     const modelos = document.querySelector("#modelos-container");
     //Criar sets com as marcas e modelos existentes
-    let marcas_carro = new Set(carros.map(carro => carro.marca));
-    let modelos_carro = new Set(carros.map(carro => carro.modelo));
+    marcas_carro = new Set(carros.map(carro => carro.marca));
+    modelos_carro = new Set(carros.map(carro => carro.modelo));
 
     //Gerar as estruturas e inseri-las na tela
     marcas_carro.forEach(marca => {
@@ -209,38 +211,32 @@ function vermais(){
 document.querySelector("#aplicar-filtros").addEventListener("click", function () {
     campo_alert.innerHTML = "";
     //Iniciar variaveis
-    var lista_marcas = [];
-    var lista_modelos = [];
+    var listaMarcas = [];
+    var listaModelos = [];
+    document.querySelectorAll(".lcslt-multi-selected").forEach(d => (marcas_carro.has(d.title) ? listaMarcas.push(d.title) : listaModelos.push(d.title)));
     let anoMin = document.getElementById("ano-minimo").value;
     let anoMax = document.getElementById("ano-maximo").value;
     let precoMin = document.getElementById("preco-minimo").value;
     let precoMax = document.getElementById("preco-maximo").value;
 
-    //Pegar as marcas e modelos selecionados, caso estejam selecionados: Adicionar à lista
-    for (let marca of document.querySelectorAll(".marcas")) {
-        marca.checked ? lista_marcas.push(marca.value) : null;
-    }
-    for (let modelo of document.querySelectorAll(".modelos")) {
-        modelo.checked ? lista_modelos.push(modelo.value) : null;
-    }
+
 
     //Aplicar o primeiro filtro, verificar as marcas
     let filtro = carros.filter(function (carro) {
-        if (lista_marcas.length > 0) {
-            return lista_marcas.includes(carro.marca.trim());
+        if (listaMarcas.length > 0) {
+            return listaMarcas.includes(carro.marca.trim());
         } else {
             return true;
         }
     }).filter(function (carro) { //Segundo filtro, verificar os modelos
-        if (lista_modelos.length > 0) {
-            return lista_modelos.includes(carro.modelo.trim());
+        if (listaModelos.length > 0) {
+            return listaModelos.includes(carro.modelo.trim());
         } else {
             return true;
         }
     }).filter(function (carro) { //Terceiro filtro, verificar o ano
         if (anoMin || anoMax) {
             if (anoMin && !anoMax) {
-                console.log(parseInt(carro.ano.split("/")[0]));
                 return parseInt(carro.ano.split("/")[0]) >= anoMin;
             } else if (!anoMin && anoMax) {
                 return parseInt(carro.ano.split("/")[1]) <= anoMax;
@@ -253,11 +249,12 @@ document.querySelector("#aplicar-filtros").addEventListener("click", function ()
     }).filter(function (carro) { //Quarto filtro, verificar o preço
         if (precoMin || precoMax) {
             if (precoMin && !precoMax) {
-                return carro.preco >= precoMin;
+                return carro.preco >= parseFloat(precoMin);
             } else if (!precoMin && precoMax) {
-                return carro.preco <= precoMax;
+                return carro.preco <= parseFloat(precoMax);
             } else {
-                return carro.preco >= precoMin && carro.preco <= precoMax;
+
+                return carro.preco >= parseFloat(precoMin) && carro.preco <= parseFloat(precoMax);
             }
         } else {
             return true;
@@ -280,23 +277,8 @@ function modal(modelo) {
     document.querySelector("#botao-enviar").setAttribute("rel", modelo);
 }
 
-//Adicionar evento de clique ao botão de enviar da janela modal (Não possui efeitos práticos)
-document.querySelector("#botao-enviar").addEventListener("click", function () {
-    let dados = {
-        nome: document.getElementById("nome").value,
-        email: document.getElementById("email").value,
-        telefone: document.getElementById("telefone").value,
-        endereco: document.getElementById("endereco").value
-    }
-
-    interesses.push(dados);
-    alert("Interesse registrado com sucesso!")
-});
-
 //Adicionar evento de clique ao botão de limpar os filtros (Reiniciar os valores)
 document.querySelector("#limpar-filtros").addEventListener("click", function () {
-    document.querySelectorAll(".marcas").forEach(input => input.checked = false);
-    document.querySelectorAll(".modelos").forEach(input => input.checked = false);
     document.getElementById("ano-minimo").value = "";
     document.getElementById("ano-maximo").value = "";
     document.getElementById("preco-minimo").value = "";

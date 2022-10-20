@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light.css">
     <link rel="stylesheet" href="icofont/icofont.min.css">
     <link rel="shortcut icon" href="/img/fav-autoshop.jpg" type="image/x-icon">
     <title>Estoque</title>
@@ -64,15 +65,15 @@
                 <div class="card card-body" style="display: flex;">
                     <div class="col-sm-4 col-12">
                         <h6 class="d-block">Marcas</h6>
-                        <div id="marcas-container">
-                            <!--Injetar com javascript-->
-                        </div>
+                        <select name="marcas-container" id="marcas-container" multiple>
+
+                        </select>
                     </div>
                     <div class="col-sm-4 col-12">
                         <h6 class="d-block">Modelos</h6>
-                        <div id="modelos-container">
-                            <!--Injetar com javascript-->
-                        </div>
+                        <select name="modelos-container" id="modelos-container" multiple>
+
+                        </select>
                     </div>
 
                     <!-- resultados -->
@@ -109,42 +110,6 @@
             </div>
         </div>
     </main>
-
-    <div class="modal fade" id="janela-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="titulo-modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="titulo-modal">Registrar interesse</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="" onsubmit="return false;">
-                        <div class="mb-3">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="telefone" class="form-label">Telefone</label>
-                            <input type="text" class="form-control" id="telefone">
-                        </div>
-                        <div class="mb-3">
-                            <label for="endereco" class="form-label">Endereco</label>
-                            <input type="text" class="form-control" id="endereco">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button id="botao-enviar" type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="text-center text-lg-start bgCinza text-muted pt-1">
         <div class="container-fluid text-right text-black">
@@ -208,6 +173,22 @@
             Desenvolvido por © <b>Grupo 2</b> | Todos os direitos reservados
         </div>
     </footer>
+    
+    <script src="js/lc_select.min.js"></script>
+    <script>
+        const select = document.querySelector('select[name=modelos-container]');
+        new lc_select(select, {
+            wrap_width: '100%',
+            min_for_search: 3,
+            pre_placeh_opt: true,
+        });
+        const select2 = document.querySelector('select[name=marcas-container]');
+        new lc_select(select2, {
+            wrap_width: '100%',
+            min_for_search: 3,
+            pre_placeh_opt: true,
+        });
+    </script>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/db.js"></script>
