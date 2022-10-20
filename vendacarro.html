@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <!-- Navegação -->
-    <nav class="navbar navbar-expand-lg bg-nav-autoshop">
+    <!-- Navegação por Laila e Nikolas -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-nav-autoshop">
         <div class="container-fluid navpad">
-            <a class="navbar-brand" href="vendacarro.html"><img src="/img/logotipo-branco.png" width="200px"
+            <a class="navbar-brand" href="index.html"><img src="/img/logotipo-branco.png" width="200px"
                     alt="Logo AutoShop"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="nnavbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,10 +43,10 @@
         </div>
     </nav>
 
-    <main>
+    <main class="mx-2">
         <div class="container">
-            <div class="text-center pt-2">
-                <h1>Venda seu carro aqui!</h1>
+            <div class="text-center pt-5">
+                <h1 class="my-4">Venda seu carro aqui!</h1>
             </div>
             <div id="form">
                 <form onsubmit="return false;">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div>
-                        <h2>Sobre o carro</h2>
+                        <h2 class="mt-5 mb-3">Sobre o carro</h2>
                         <div class="mb-3">
                             <label for="modelo">Modelo</label>
                             <input id="modelo" type="text" class="form-control">
@@ -104,13 +104,13 @@
                         </div>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary" onclick="alert('seus dados foram gravados com sucesso!');">Enviar</button>
+                    <button type="submit" class="btn btn-dark mt-2 mb-5" onclick="alert('seus dados foram gravados com sucesso!');">Enviar</button>
                 </form>
 
             </div>
         </div>
     </main>
-    <footer class="text-center text-lg-start bg-light text-muted pt-1">
+    <footer class="text-center text-lg-start bgCinza text-muted pt-1">
         <div class="container-fluid text-right text-black">
           <!-- Grid row -->
           <div class="row mt-3">
@@ -167,7 +167,7 @@
           </div>
         </div>
       <!-- Texto de Copyright -->
-      <div class="text-center text-black p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      <div class="text-center text-black p-4" style="background-color: #D6D6D6;">
         Desenvolvido por © <b>Grupo 2</b> | Todos os direitos reservados
       </div>
     </footer>
