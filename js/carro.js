@@ -21,7 +21,7 @@ document.querySelector("#ficha-tecnica").innerHTML = `
     </tr>
     <tr>
         <td colspan="3">
-            <b>Preço:</b> R$ ${parseFloat(carro.preco).toFixed(3)}
+            <b>Preço:</b> R$ ${carro.preco}
         </td>
     </tr>
 `
@@ -30,7 +30,7 @@ for (let i = 0; i < carro.nome_imagem.length; i++){
     console.log(carro.nome_imagem[i], i);
     document.querySelector("#carousel-images").innerHTML += `
     <div class="carousel-item active">
-        <img src="/img/${carro.modelo.toLowerCase()}/${carro.nome_imagem[i]}" class="d-block w-100" alt="...">
+        <img src="/img/${carro.modelo.toLowerCase()}/${carro.nome_imagem[i]}" class="d-block w-100" alt="${lista_carros[j].nome_imagem[0]}">
     </div>
     `;
 }

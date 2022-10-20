@@ -87,12 +87,12 @@ function gerarEstrutura(lista_carros) {
         document.querySelector("#paginacao").innerHTML += (i + 1 == 1) ? `<a href="#" class="links-paginacao" id="link-${i + 1}" onclick="paginar('pagina-${i + 1}')" style="color: red; text-decoration: underline;">${i + 1}</a>&nbsp;&nbsp;` :
             `<a href="#" class="links-paginacao" id="link-${i + 1}" onclick="paginar('pagina-${i + 1}')" style=>${i + 1}</a>&nbsp;&nbsp;`;
 
-        }
+    }
     document.querySelector("#paginacao").innerHTML += `<a href="#" onclick="posterior()">&gt;</a>`;
     return estrutura;
 }
 
-function gerarAlert(tipo, mensagem){
+function gerarAlert(tipo, mensagem) {
     if (campo_alert.innerHTML == "") {
         const wrapper = document.createElement('div')
         wrapper.innerHTML = [
@@ -164,6 +164,19 @@ function carregarValores() {
     });
 
     document.querySelectorAll(".botao-vermais").forEach(a => a.addEventListener("click", vermais));
+
+    const select = document.querySelector('select[name=modelos-container]');
+    new lc_select(select, {
+        wrap_width: '100%',
+        min_for_search: 3,
+        pre_placeh_opt: true,
+    });
+    const select2 = document.querySelector('select[name=marcas-container]');
+    new lc_select(select2, {
+        wrap_width: '100%',
+        min_for_search: 3,
+        pre_placeh_opt: true,
+    }); 
 }
 
 //Pegar evento de clique do botão de pesquisar modelos ou marcas
@@ -197,9 +210,9 @@ document.querySelector("#bt-pesquisa").addEventListener("click", function () {
     }
 });
 
-function vermais(){
+function vermais() {
     const id = this.rel
-    carro = carros.filter(function(carro){
+    carro = carros.filter(function (carro) {
         return carro.id == id;
     })[0];
 

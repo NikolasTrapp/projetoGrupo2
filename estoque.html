@@ -44,11 +44,10 @@
         </div>
     </nav>
 
-    <!-- filtro -->
-
+    <!-- Nikolas -->
     <main>
         <div class="container">
-            <div class="mt-3 mb-5">
+            <div class="mt-3 mb-5 w-100">
                 <div class="cabecalho-estoque">
                     <h1>Estoque</h1>
                     <input type="text" id="pesquisaEstoque" placeholder="Pesquisar marcas ou modelos">
@@ -76,8 +75,6 @@
                         </select>
                     </div>
 
-                    <!-- resultados -->
-
                     <div class="col-sm-4 col-12">
                         <h6 class="d-block">Ano</h6>
                         <label for="ano-minimo">De:</label>
@@ -99,8 +96,9 @@
                 </div>
             </div>
             <div class="mb-5">
-                <div id="liveAlertPlaceholder"></div>
-                <!--Injetar com javascript-->
+                <div id="liveAlertPlaceholder">
+                    <!--Injetar com javascript-->
+                </div>
                 <div id="estoque">
                     <!--Injetar com javascript-->
                 </div>
@@ -111,6 +109,7 @@
         </div>
     </main>
 
+    <!-- Rodrigo -->
     <footer class="text-center text-lg-start bgCinza text-muted pt-1">
         <div class="container-fluid text-right text-black">
             <!-- Grid row -->
@@ -174,23 +173,8 @@
         </div>
     </footer>
     
-    <script src="js/lc_select.min.js"></script>
-    <script>
-        const select = document.querySelector('select[name=modelos-container]');
-        new lc_select(select, {
-            wrap_width: '100%',
-            min_for_search: 3,
-            pre_placeh_opt: true,
-        });
-        const select2 = document.querySelector('select[name=marcas-container]');
-        new lc_select(select2, {
-            wrap_width: '100%',
-            min_for_search: 3,
-            pre_placeh_opt: true,
-        });
-    </script>
-
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/lc_select.min.js"></script>
     <script src="js/db.js"></script>
     <script src="js/estoque.js"></script>
 </body>
