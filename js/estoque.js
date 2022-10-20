@@ -155,10 +155,10 @@ function carregarValores() {
 
     //Gerar as estruturas e inseri-las na tela
     marcas_carro.forEach(marca => {
-        marcas.innerHTML += `<label class="d-block"><input class="marcas" type="checkbox" value="${marca}"> ${marca}</label>`;
+        marcas.innerHTML += `<option value="${marca}">${marca}</option>`;
     });
     modelos_carro.forEach(modelo => {
-        modelos.innerHTML += `<label class="d-block"><input class="modelos" type="checkbox" value="${modelo}"> ${modelo}</label>`;
+        modelos.innerHTML += `<option value="${modelo}">${modelo}</option>`;
     });
 }
 
@@ -175,8 +175,9 @@ document.querySelector("#bt-pesquisa").addEventListener("click", function () {
 
     //Se a lista possuir um registro: Gerar estrutura, caso contrário informar erro
     if (lista_carros.length > 0) {
-        gerarAlert("success", `${lista_carros.length} carros encontrados!!`);
+        gerarAlert("success", `${lista_carros.length} carro(s) encontrados!!`);
         estoque.innerHTML = gerarEstrutura(lista_carros);
+        atual = 1;
     } else {
         if (campo_alert.innerHTML == "") {
             const wrapper = document.createElement('div')
@@ -252,8 +253,9 @@ document.querySelector("#aplicar-filtros").addEventListener("click", function ()
 
     //Caso o filtro gere uma lista com mais de um valor, inseri-los na tela, caso contrário informar erro
     if (filtro.length > 0) {
-        gerarAlert("success", `${filtro.length} carros encontrados!!`);
+        gerarAlert("success", `${filtro.length} carro(s) encontrados!!`);
         estoque.innerHTML = gerarEstrutura(filtro);
+        atual = 1;
     } else {
         gerarAlert("danger", "Não encontramos nenhum veículo com este padrão de filtros!!")
     }
