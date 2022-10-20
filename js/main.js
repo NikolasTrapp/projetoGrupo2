@@ -15,7 +15,7 @@ document.querySelector("#botao-pesquisa").addEventListener("click", function(){
 });
 
 function vermais(){
-    const id = this.rel
+    const id = this.rel;
     carro = carros.filter(function(carro){
         return carro.id == id;
     })[0];
