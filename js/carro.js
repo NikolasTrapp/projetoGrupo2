@@ -5,6 +5,11 @@ document.querySelector("#nome-carro").innerHTML = carro.modelo;
 document.querySelector("#descricao-carro").innerHTML = carro.descricao;
 document.querySelector("#ficha-tecnica").innerHTML = `
     <tr>
+    <td colspan="3">
+        <b>Preço:</b><span class="preco"> R$ ${carro.preco}</span>
+    </td>
+    </tr>
+    <tr>
         <td><b>Câmbio:</b> ${carro.cambio}</td>
         <td><b>Ano:</b> ${carro.ano}</td>
         <td><b>Km:</b> ${carro.quilometragem}</td>
@@ -19,14 +24,9 @@ document.querySelector("#ficha-tecnica").innerHTML = `
         <td><b>Garantia: </b> ${carro.garantia}</td>
         <td><b>Freio ABS:</b> ${carro.freio}</td>
     </tr>
-    <tr>
-        <td colspan="3">
-            <b>Preço:</b> R$ ${carro.preco}
-        </td>
-    </tr>
 `
 
-for (let i = 0; i < carro.nome_imagem.length; i++){
+for (let i = 0; i < carro.nome_imagem.length; i++) {
     document.querySelector("#carousel-images").innerHTML += `
     <div class="carousel-item active">
         <img src="/img/${carro.modelo.toLowerCase()}/${carro.nome_imagem[i]}" class="d-block w-100" alt="${carro.nome_imagem[i]}">

@@ -63,11 +63,6 @@ h5 {
     color: #fff;
 }
 
-.tituloNb {
-    margin: 3rem 0 0 0;
-    text-transform: uppercase;
-}
-
 .button-box {
     text-align: center;
 }
@@ -160,7 +155,7 @@ input.pesquisar {
 .cabecalho-estoque h1 {
     margin: 15px;
     margin-left: 1vh; 
-    margin-top: 7vh;
+    margin-top: 10vh;
     padding: 15px 0;
 }
 
@@ -282,7 +277,7 @@ input.pesquisar {
 
 /*Sobre*/
 .sobreNos {
-   padding-top: 2vh !important;
+   padding: 4vh 0 2vh 0 !important;
 }
 
 /*Footer*/
