@@ -52,7 +52,7 @@ function gerarEstrutura(lista_carros) {
                                             <span class="preco">R$ ${lista_carros[j + 1].preco}</span>
                                         </div>
                                         <div class="text-end">
-                                            <a href="#" class="btn btn-outline-dark btn-sm botao-vermais" rel="${lista_carros[i + 1].id}">VER MAIS</a>
+                                            <a href="#" class="btn btn-outline-dark btn-sm botao-vermais" rel="${lista_carros[j + 1].id}">VER MAIS</a>
                                         </div>
                                     </div>
                                 </div>
