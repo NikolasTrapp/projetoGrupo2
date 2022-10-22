@@ -45,7 +45,7 @@
 8. Página individual do veículo - Criado por Laila e Nikolas<br>
 &gt; Carousel com fotos do veículo<br>
 &gt; Formulário de interesse<br>
-&gt; Informações do veículo<br>
+&gt; Informações do veículo<br><br>
 Protótipo no Figma por Laila e Emylli<br>
 <h2>CONCLUSÃO</h2>
 <p>O projeto cumpriu com as expectativas do grupo. As páginas foram criadas com base nos diagramas e protótipos iniciais, atingindo os critérios de responsividade, utilização de componentes e número de páginas.</p>
