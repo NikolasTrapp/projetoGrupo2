@@ -183,7 +183,7 @@ input.pesquisar {
 
     .cabecalho-estoque button {
         margin: 5px 5px;
-        margin-left: 14.5vh;
+        margin-left: 14vh;
     }
 
     #pesquisa {
@@ -278,6 +278,9 @@ input.pesquisar {
 /*Sobre*/
 .sobreNos {
    padding: 4vh 0 2vh 0 !important;
+}
+.tituloNb{
+    margin-top: 2vh;
 }
 
 /*Footer*/
