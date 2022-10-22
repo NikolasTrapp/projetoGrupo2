@@ -331,3 +331,13 @@ input.pesquisar {
     transition: all 0.5s;
 
 }
+
+.espacamentoAvaliacao {
+    padding: 25px;
+}
+
+.botaoAvaliacao {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
