@@ -9,7 +9,7 @@
 <p>As tarefas foram divididas entre o grupo, ficando cada integrante responsável por uma ou mais páginas. Primeiro foi criado um índice com tudo que iria compor o site, em seguida foi criado um protótipo no Figma a fim de se manter a unidade visual do projeto. Para controle de impliementação, foi utilizada uma metodologia de desenvolvimento baseada no artigo "A successful Git branching model" de Vincent Driessen.</p>
 <p>O protótipo no Figma pode ser visualizado neste <a href="https://www.figma.com/file/uRtSUsJGXJoroufJShlvTJ/ShopAuto?node-id=0%3A1">link.</a></p>
 <h2>Protótipo</h2>
-<p>1. Home<br> - Criado por Laila e Nikolas<br>
+<p>1. Home - Criado por Laila e Nikolas<br>
 &gt; 3 banners rotativos
 &gt; Filtro de busca (marca/modelo/ano/faixa de preço)<br>
 &gt; Últimas novidades<br>
