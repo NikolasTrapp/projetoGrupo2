@@ -6,31 +6,31 @@
 <h2>FERRAMENTAS UTILIZADAS</h2>
 <p>Na criação do projeto foram utilizadas as seguintes ferramentas:<br>Linguagens: HTML 5, CSS 3 e JavaScript<br>Frameworks: Bootstrap<br>Editores de texto: Visual Studio Code<br>Sistema de controle de versão: Git<br>Criação do protótipo: Figma</p>
 <h2>PROJETO E IMPLEMENTAÇÃO</h2>
-<p>As tarefas foram divididas entre o grupo, ficando cada integrante responsável por uma ou mais páginas. Primeiro foi criado um índice com tudo que iria compor o site, em seguida foi criado um protótipo no Figma a fim de se manter a unidade visual do projeto. Para controle de impliementação, foi utilizada uma metodologia de desenvolvimento baseada no artigo "A successful Git branching model" de Vincent Driessen.</p>
+<p>As tarefas foram divididas entre o grupo, ficando cada integrante responsável por uma ou mais páginas. Primeiro foi criado um índice com tudo que iria compor o site, em seguida foi criado um protótipo no Figma a fim de se manter a unidade visual do projeto. Para controle de implementação, foi utilizada uma metodologia de desenvolvimento baseada no artigo "A successful Git branching model" de Vincent Driessen.</p>
 <p>O protótipo no Figma pode ser visualizado neste <a href="https://www.figma.com/file/uRtSUsJGXJoroufJShlvTJ/ShopAuto?node-id=0%3A1">link.</a></p>
-<h2>Protótipo</h2>
+<h2>Conteúdo do Projeto</h2>
 <p>1. Home - Criado por Laila e Nikolas<br>
 &gt; 3 banners rotativos
 &gt; Filtro de busca (marca/modelo/ano/faixa de preço)<br>
 &gt; Últimas novidades<br>
-&gt; Nossos serviços (compramos seu carro/ avaliação sem compromisso/financiamento com a melhores taxas)<br>
+&gt; Mais procurados<br>
+&gt; Compramos seu veículo<br>
 <br>
 2. Estoque - Criado por Nikolas<br>
 &gt; Filtro de busca<br>
 &gt; Veículos encontrados<br>
 <br>
 3. Venda seu carro - Criado por Nikolas<br>
-&gt; Formulário<br>
-&gt; Barra de ícones explicando como funciona<br>
-&gt; FAQ<br>
+&gt; Formulários<br>
 <br>
 4. Sobre Nós - Criado por Emylli<br>
-&gt; História<br>
-&gt; Missão<br>
+&gt; Sobre<br>
+&gt; Missão/Visão/Valores<br>
+&gt; Nosso time<br>
+&gt; Marcas<br>
 <br>
 5. Contato - Criado por Rodrigo<br>
 &gt; Formulário de contato<br>
-&gt; Informações de contato (email/telefone/endereço)<br>
 &gt; Mapa de localicação<br>
 <br>
 6. Rodapé - Criado por Rodrigo<br>
@@ -41,8 +41,12 @@
 &gt; Botão de WhatsApp<br>
 <br>
 7. Financie - Criado por Emylli<br>
-&gt; Lista de bancos que financiam<br>
 &gt; Formulário de interesse</p>
+8. Página individual do veículo - Criado por Laila e Nikolas<br>
+&gt; Carousel com fotos do veículo<br>
+&gt; Formulário de interesse</p>
+&gt; Informações do veículo<br>
+Protótipo no Figma por Laila e Emylli<br>
 <h2>CONCLUSÃO</h2>
 <p>O projeto cumpriu com as expectativas do grupo. As páginas foram criadas com base nos diagramas e protótipos iniciais, atingindo os critérios de responsividade, utilização de componentes e número de páginas.</p>
 <p>Todos os membros do grupo se dedicaram muito e colaboraram para o desenvolvimento de um projeto de excelência.</p>
