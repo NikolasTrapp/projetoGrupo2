@@ -44,7 +44,7 @@
 &gt; Formulário de interesse</p>
 8. Página individual do veículo - Criado por Laila e Nikolas<br>
 &gt; Carousel com fotos do veículo<br>
-&gt; Formulário de interesse</p>
+&gt; Formulário de interesse<br>
 &gt; Informações do veículo<br>
 Protótipo no Figma por Laila e Emylli<br>
 <h2>CONCLUSÃO</h2>
