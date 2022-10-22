@@ -9,38 +9,38 @@
 <p>As tarefas foram divididas entre o grupo, ficando cada integrante responsável por uma ou mais páginas. Primeiro foi criado um índice com tudo que iria compor o site, em seguida foi criado um protótipo no Figma a fim de se manter a unidade visual do projeto. Para controle de impliementação, foi utilizada uma metodologia de desenvolvimento baseada no artigo "A successful Git branching model" de Vincent Driessen.</p>
 <p>O protótipo no Figma pode ser visualizado neste <a href="https://www.figma.com/file/uRtSUsJGXJoroufJShlvTJ/ShopAuto?node-id=0%3A1">link.</a></p>
 <h2>Protótipo</h2>
-<p>1. Home<br> - Criado por Laila e Nikolas
-&gt; 3 banners rotativos<br>
+<p>1. Home<br> - Criado por Laila e Nikolas<br>
+&gt; 3 banners rotativos
 &gt; Filtro de busca (marca/modelo/ano/faixa de preço)<br>
 &gt; Últimas novidades<br>
 &gt; Nossos serviços (compramos seu carro/ avaliação sem compromisso/financiamento com a melhores taxas)<br>
 <br>
-2. Estoque<br> - Criado por Nikolas
+2. Estoque - Criado por Nikolas<br>
 &gt; Filtro de busca<br>
 &gt; Veículos encontrados<br>
 <br>
-3. Venda seu carro<br> - Criado por Nikolas
+3. Venda seu carro - Criado por Nikolas<br>
 &gt; Formulário<br>
 &gt; Barra de ícones explicando como funciona<br>
 &gt; FAQ<br>
 <br>
-4. Sobre Nós<br> - Criado por Emylli
+4. Sobre Nós - Criado por Emylli<br>
 &gt; História<br>
 &gt; Missão<br>
 <br>
-5. Contato<br> - Criado por Rodrigo
+5. Contato - Criado por Rodrigo<br>
 &gt; Formulário de contato<br>
 &gt; Informações de contato (email/telefone/endereço)<br>
 &gt; Mapa de localicação<br>
 <br>
-6. Rodapé<br> - Criado por Rodrigo
+6. Rodapé - Criado por Rodrigo<br>
 &gt; Logotipo<br>
 &gt; Horário de atendimento<br>
 &gt; Informações de contato<br>
 &gt; Redes Sociais<br>
 &gt; Botão de WhatsApp<br>
 <br>
-7. Financie<br> - Criado por Emylli
+7. Financie - Criado por Emylli<br>
 &gt; Lista de bancos que financiam<br>
 &gt; Formulário de interesse</p>
 <h2>CONCLUSÃO</h2>
