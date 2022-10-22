@@ -308,6 +308,9 @@ input.pesquisar {
         width: 10vh;
         margin-left: 14vh;
     }
+    .financieFooter{
+        margin-top: 0vh !important;
+    }
 }
 .img-fluid {
     margin-top: 10vh;
@@ -343,4 +346,7 @@ input.pesquisar {
     text-decoration: none;
     font-weight: bold;
     color: white;
+}
+.financieFooter{
+    margin-top: 9.8vh;
 }
