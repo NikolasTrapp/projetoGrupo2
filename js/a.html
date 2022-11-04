@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+    <link rel="shortcut icon" href="/img/fav-autoshop.jpg" type="image/x-icon">
+    <title>Estoque</title>
+</head>
+
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg bg-nav-autoshop">
+        <div class="container-fluid navpad">
+            <a class="navbar-brand" href="estoque.html"><img src="/img/logotipo-branco.png" width="200px"
+                    alt="Logo AutoShop"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="nnavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icofont-navigation-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estoque.html">Estoque</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vendacarro.html">Venda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="cabecalho-estoque">
+                <h1 id="teste">Estoque</h1>
+                <input type="text" id="pesquisa" placeholder="Pesquisar marcas ou modelos">
+                <button id="bt-pesquisa" class="btn btn-dark pesquisa-estoque botoes-estoque">PESQUISAR</button>
+                <button class="btn border-dark btn-light text-black botoes-estoque" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#filtros-collapse" aria-expanded="false"
+                    aria-controls="filtros-collapse">
+                    FILTRAR
+                </button>
+            </div>
+            <div class="collapse" id="filtros-collapse">
+                <div class="card card-body" style="display: flex;">
+                    <div class="col-sm-4 col-12">
+                        <h6 class="d-block">Marcas</h6>
+                        <div id="marcas-container">
+                            <!--Injetar com javascript-->
+                            <label class="d-block"><input class="marcas" type="checkbox" value="Volkswagen">
+                                Volkswagen</label><label class="d-block"><input class="marcas" type="checkbox"
+                                    value="Fiat"> Fiat</label><label class="d-block"><input class="marcas"
+                                    type="checkbox" value="Ford"> Ford</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        <h6 class="d-block">Modelos</h6>
+                        <div id="modelos-container">
+                            <!--Injetar com javascript-->
+                            <label class="d-block"><input class="modelos" type="checkbox" value="AAAAA">
+                                AAAAA</label><label class="d-block"><input class="modelos" type="checkbox" value="BBB">
+                                BBB</label><label class="d-block"><input class="modelos" type="checkbox" value="CCC">
+                                CCC</label><label class="d-block"><input class="modelos" type="checkbox" value="DDD">
+                                DDD</label><label class="d-block"><input class="modelos" type="checkbox" value="EEE">
+                                EEE</label><label class="d-block"><input class="modelos" type="checkbox" value="FFF">
+                                FFF</label><label class="d-block"><input class="modelos" type="checkbox" value="GGG">
+                                GGG</label><label class="d-block"><input class="modelos" type="checkbox" value="HHH">
+                                HHH</label><label class="d-block"><input class="modelos" type="checkbox" value="III">
+                                III</label><label class="d-block"><input class="modelos" type="checkbox" value="JJJ">
+                                JJJ</label><label class="d-block"><input class="modelos" type="checkbox" value="KKK">
+                                KKK</label><label class="d-block"><input class="modelos" type="checkbox" value="LLL">
+                                LLL</label><label class="d-block"><input class="modelos" type="checkbox" value="MMM">
+                                MMM</label><label class="d-block"><input class="modelos" type="checkbox" value="NNN">
+                                NNN</label><label class="d-block"><input class="modelos" type="checkbox" value="OOO">
+                                OOO</label><label class="d-block"><input class="modelos" type="checkbox" value="PPP">
+                                PPP</label><label class="d-block"><input class="modelos" type="checkbox" value="QQQ">
+                                QQQ</label><label class="d-block"><input class="modelos" type="checkbox" value="RRR">
+                                RRR</label><label class="d-block"><input class="modelos" type="checkbox" value="SSS">
+                                SSS</label><label class="d-block"><input class="modelos" type="checkbox" value="TTT">
+                                TTT</label><label class="d-block"><input class="modelos" type="checkbox" value="UUU">
+                                UUU</label><label class="d-block"><input class="modelos" type="checkbox" value="VVV">
+                                VVV</label><label class="d-block"><input class="modelos" type="checkbox" value="WWW">
+                                WWW</label><label class="d-block"><input class="modelos" type="checkbox" value="XXX">
+                                XXX</label><label class="d-block"><input class="modelos" type="checkbox" value="YYY">
+                                YYY</label><label class="d-block"><input class="modelos" type="checkbox" value="ZZZ">
+                                ZZZ</label><label class="d-block"><input class="modelos" type="checkbox" value="AAB">
+                                AAB</label><label class="d-block"><input class="modelos" type="checkbox" value="AAC">
+                                AAC</label><label class="d-block"><input class="modelos" type="checkbox" value="AAD">
+                                AAD</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        <h6 class="d-block">Ano</h6>
+                        <label for="ano-minimo">De:</label>
+                        <input type="number" id="ano-minimo" class="input-filtro">
+                        <label for="ano-maximo">Até:</label>
+                        <input type="number" id="ano-maximo" class="input-filtro">
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        <h6 class="d-block">Preço</h6>
+                        <label for="preco-minimo">De:</label>
+                        <input type="number" id="preco-minimo" class="input-filtro">
+                        <label for="preco-maximo">Até:</label>
+                        <input type="number" id="preco-maximo" class="input-filtro">
+                    </div>
+                    <button class="btn btn-dark pesquisa-estoque botoes-estoque" id="aplicar-filtros">Aplicar
+                        filtros</button>
+                    <button class="btn border-dark btn-light text-black botoes-estoque" id="limpar-filtros">Limpar
+                        filtros</button>
+                </div>
+            </div>
+            <div id="liveAlertPlaceholder"></div>
+
+            <div id="estoque">
+                <div class="container paginas text-center" id="pagina-1" style="display: inline-block;">
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">AAAAA - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 5000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="1">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">BBB - 2013</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2013 | 1200 km</span>
+                                        <span class="preco">R$ 6000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="2">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">CCC - 2014</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2014 | 1200 km</span>
+                                        <span class="preco">R$ 7000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="3">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">DDD - 2015</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2015 | 1200 km</span>
+                                        <span class="preco">R$ 8000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="4">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">EEE - 2016</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2016 | 1200 km</span>
+                                        <span class="preco">R$ 9000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="2">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">FFF - 2017</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2017 | 1200 km</span>
+                                        <span class="preco">R$ 10000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="6">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">GGG - 2018</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2018 | 1200 km</span>
+                                        <span class="preco">R$ 18900.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="7">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">HHH - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 18900.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="2">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">III - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 18900.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="9">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container paginas text-center" id="pagina-2" style="display: none;">
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">JJJ - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 5000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="10">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">KKK - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 5000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="3">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">LLL - 2013</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2013 | 1200 km</span>
+                                        <span class="preco">R$ 6000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="12">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">MMM - 2014</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2014 | 1200 km</span>
+                                        <span class="preco">R$ 7000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="13">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">NNN - 2015</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2015 | 1200 km</span>
+                                        <span class="preco">R$ 8000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="3">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">OOO - 2016</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2016 | 1200 km</span>
+                                        <span class="preco">R$ 9000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="15">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">PPP - 2017</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2017 | 1200 km</span>
+                                        <span class="preco">R$ 10000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="16">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">QQQ - 2018</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2018 | 1200 km</span>
+                                        <span class="preco">R$ 18900.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="3">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">RRR - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 18900.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="18">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container paginas text-center" id="pagina-3" style="display: none;">
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">SSS - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 18900.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="19">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">TTT - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 5000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="4">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">UUU - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 5000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="21">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">VVV - 2013</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2013 | 1200 km</span>
+                                        <span class="preco">R$ 6000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="22">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">WWW - 2014</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2014 | 1200 km</span>
+                                        <span class="preco">R$ 7000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="4">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">XXX - 2015</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2015 | 1200 km</span>
+                                        <span class="preco">R$ 8000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="24">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">YYY - 2016</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2016 | 1200 km</span>
+                                        <span class="preco">R$ 9000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="25">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">ZZZ - 2017</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2017 | 1200 km</span>
+                                        <span class="preco">R$ 10000.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="4">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">AAB - 2018</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2018 | 1200 km</span>
+                                        <span class="preco">R$ 18900.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="27">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container paginas text-center" id="pagina-4" style="display: none;">
+                    <div class="row">
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">AAC - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 18900.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="28">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-sm-4 col-12 pb-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/fusca.jpg" class="card-img-top" alt="fusca.jpg"
+                                    style="width: 100%; height: 275px;">
+                                <div class="card-body">
+                                    <div class="text-start">
+                                        <h5 class="card-title">AAD - 2012</h5>
+                                        <span class="card-text descricao">1.0 UNIQUE 12V FLEX 4P MANUAL</span>
+                                        <span class="card-text descricao">2012 | 1200 km</span>
+                                        <span class="preco">R$ 18900.90</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <a href="#" class="btn btn-outline-dark btn-sm" rel="5">VER MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="paginacao" class="text-center"><a href="#" onclick="anterior()">&lt;</a>&nbsp;&nbsp;<a href="#"
+                    class="links-paginacao" id="link-1" onclick="paginar('pagina-1')"
+                    style="color: red; text-decoration: underline;">1</a>&nbsp;&nbsp;<a href="#" class="links-paginacao"
+                    id="link-2" onclick="paginar('pagina-2')" style="">2</a>&nbsp;&nbsp;<a href="#"
+                    class="links-paginacao" id="link-3" onclick="paginar('pagina-3')" style="">3</a>&nbsp;&nbsp;<a
+                    href="#" class="links-paginacao" id="link-4" onclick="paginar('pagina-4')"
+                    style="">4</a>&nbsp;&nbsp;<a href="#" onclick="posterior()">&gt;</a></div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="janela-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="titulo-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="titulo-modal">Registrar interesse</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" onsubmit="return false;">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="text" class="form-control" id="telefone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="endereco" class="form-label">Endereco</label>
+                            <input type="text" class="form-control" id="endereco">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button id="botao-enviar" type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-lg-start bg-light text-muted pt-1">
+        <div class="container-fluid text-right text-black">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid coluna -->
+                <div class="col-md-3">
+                    <!-- logo -->
+                    <img src="/img/logotipo-preto.png" class="img-fluid " alt="Imagem logo">
+                </div>
+                <!-- Coluna do Grid-->
+                <div class="col-md-3">
+                    <!-- Textos do Footer -->
+                    <h6 class="text-uppercase mb-2 mt-4 tituloFooter"><strong>
+                            Horário de Atendimento</strong></h6>
+                    <p>Segunda a Sexta das 8:00 as 18:00
+                    </p>
+                    <p>Sábado das 8:00 as 12:00
+                    </p>
+                    <h6 class="text-uppercase fw-bold mt-4 tituloFooter">
+                        Endereço
+                    </h6>
+                    <p>Rua 7 de setembro, 1562</p>
+                    <p>Blumenau-SC</p>
+                    <p>89034-992</p>
+                </div>
+                <!-- Coluna do grid -->
+                <div class="col-md-3">
+                    <!-- Textos -->
+                    <h6 class="text-uppercase fw-bold mt-4 tituloFooter">
+                        Contato
+                    </h6>
+                    <p>
+                        (47) 3367-4560
+                    </p>
+                    <p>
+                        (47) 99614-9202
+                    </p>
+                    <p>
+                        contato@shopauto.com.br
+                    </p>
+                </div>
+                <!-- Coluna do Grid -->
+                <div class="col-md-3">
+                    <!-- Texto -->
+                    <h6 class="text-uppercase fw-bold pr-8 mt-4  tituloFooter">
+                        Siga-nos nas redes</h6>
+                    <!-- Ícones das redes sociais -->
+                    <p><a href=""><i class="bi bi-instagram icone"></i></a>
+                        <a href=""><i class="bi bi-facebook icone"></i>
+                    </p></a>
+                    <a href=""><img src="/img/whats.png" class="whatslogo" alt="Logo do Whatsapp"></a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Texto de Copyright -->
+        <div class="text-center text-black p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            Desenvolvido por © <b>Grupo 2</b> | Todos os direitos reservados
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/estoque.js"></script>
+</body>
+
+</html>
